@@ -94,7 +94,7 @@ export default angular.module('ui.date', [])
         var initDateWidget = function() {
           var showing = false;
           var opts = getOptions();
-          var timezone = controller ? controller.$options.getOption('timezone') : null;
+          var timezone = controller && controller.$options ? controller.$options.getOption('timezone') : null;
 
           function setVal(forcedUpdate) {
             var keys = ['Hours', 'Minutes', 'Seconds', 'Milliseconds'];
